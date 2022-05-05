@@ -24,7 +24,7 @@ import getCommerce from '../utils/commerce';
 export default function Layout({
   children,
   commercePublicKey,
-  title = 'DarkMeowShop',
+  title = 'Coolshop',
 }) {
   const classes = useStyles();
   const { state, dispatch } = useContext(Store);
@@ -44,7 +44,7 @@ export default function Layout({
     <React.Fragment>
       <Head>
         <meta charSet="utf-8" />
-        <title>{`${title} - DarkMeowShop`}</title>
+        <title>{`${title} - Coolshop`}</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="viewport"
@@ -68,7 +68,7 @@ export default function Layout({
                 href="/"
                 className={classes.toolbarTitle}
               >
-                DarkMeowShop
+                Coolshop
               </Link>
             </NextLink>
             <nav>
@@ -100,7 +100,7 @@ export default function Layout({
           <Box mt={5}>
             <Typography variant="body2" color="textSecondary" align="center">
               {'© '}
-              DarkMeowShop 2022
+              Coolshop 2021
               {'.'}
             </Typography>
           </Box>

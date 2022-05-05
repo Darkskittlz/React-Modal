@@ -12,7 +12,6 @@ import {
 import { Alert } from '@material-ui/lab';
 import Layout from '../components/Layout';
 import getCommerce from '../utils/commerce';
-import IMG from './assets/bubbleGum.jpg';
 
 export default function Home(props) {
   const { products } = props;
@@ -29,7 +28,7 @@ export default function Home(props) {
                     <CardMedia
                       component="img"
                       alt={product.name}
-                      image={IMG}
+                      image={product.media.source}
                     />
                     <CardContent>
                       <Typography
