@@ -4,3 +4,4 @@ export { default as Cart } from './Cart/Cart';
 export { default as Updates } from './Updates/Updates';
 export { default as Gallery } from './Home/Home';
 export { default as Bookings } from './Bookings/Bookings';
+export { default as Prints } from './Prints/Prints';

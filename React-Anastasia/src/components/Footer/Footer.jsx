@@ -4,15 +4,15 @@ import React from 'react';
 import { mobile } from '../responsive';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'reactstrap';
-import { Layout } from 'antd';
 import { LinkTwoTone, YouTube } from '@material-ui/icons';
+
 
 const Left = styled.div`
     flex: 1;  
     display: flex;
     margin-top: 10px;
-    margin-left: 10px;
     flex-direction: column;
+    justify-content: center;
     z-index: 999;
     color: white;
 
@@ -22,18 +22,28 @@ const Left = styled.div`
     }
   `;
 
-const Logo = styled.h1`
-    ${mobile({ textAlign: 'center', marginTop: '5px' })}
-`;
-const Desc = styled.p`
-    margin: 20px 0px;
-    font-size: 12px;
-    z-index: 999;
-`;
 const SocialContainer = styled.div`
-    display: flex;
-    ${mobile({ justifyContent: 'center' })}
+  display: flex;
+  position: relative;
+  justify-content: center;
+  ${mobile({ justifyContent: 'center' })}
 `;
+
+const LogoContainer = styled.div`
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-bottom: 10px;
+
+  h1 {
+    text-align: center;
+    color: black;
+  }
+  
+  ${mobile({ justifyContent: 'center' })}
+`
+
+
 
 const SocialIcon = styled.div`
     width: 40px;
@@ -106,71 +116,70 @@ const ContactItem = styled.div`
 `;
 
 const FooterContainer = styled.div`
-  position: relative;
   width: 100%;
   display: flex;
   margin-top: 50px;
   padding-top: 50px;
-  padding-bottom: 50px;
+  left: 0;
+  bottom: 0;
   backdrop-filter: blur(10px);
 `
 
-const FooterComponent = () => (
-  <Layout>
-    <FooterContainer>
-      <Left>
-        <Logo>Jewelry Biz </Logo>
-        <Desc>
-          <p>
 
-          </p>
-        </Desc>
-        <SocialContainer>
-          <SocialIcon color="3B5999">
-            <Facebook onClick={() => window.open('https://www.facebook.com/ItsAidanPaul', '_blank')} />
-          </SocialIcon>
-          <SocialIcon color="E4405F" >
-            <Instagram onClick={() => window.open('https://www.instagram.com/aidanpaulmusic/', '_blank')} />
-          </SocialIcon>
-          <SocialIcon color="55ACEE" >
-            <YouTube onClick={() => window.open('https://www.youtube.com/channel/UCNhe2SJj5CVBkdtKWSj8HEw?view_as=subscriber', '_blank')} />
-          </SocialIcon>
-          <SocialIcon color="000000">
-            <LinkTwoTone onClick={() => window.open('https://linktr.ee/APMedia', '_blank')} />
-          </SocialIcon>
-        </SocialContainer>
-      </Left>
-      <Center>
-        <Title>Links</Title>
-        <List>
-          <Button
-            style={{ marginBottom: "5px" }}
-            aria-label="Headshot"
-            target="_blank"
-            href="https://www.aidanpaulmusic.com/_files/ugd/e80a20_8e1c035cb7df43339fe0a1eda94ee802.pdf"
-            cursor="pointer"
-            color="dark"
-          >Headshot</Button>
-          <Button
-            aria-label="Resume"
-            target="_blank"
-            href="https://www.aidanpaulmusic.com/_files/ugd/e80a20_7b2098ce624545b0a4038a43404f40e1.pdf"
-            cursor="pointer"
-            color="dark"
-          >Resume</Button>
-        </List>
-      </Center>
-      <Right>
-        <Title>Contact</Title>
-        <ContactItem>
-          <Room style={{ marginRight: '10px' }} />United States
-        </ContactItem>
-        <ContactItem>
-          <MailOutline style={{ marginRight: '10px' }} />_________@gmail.com
-        </ContactItem>
-      </Right>
-    </FooterContainer>
-  </Layout>
+
+
+
+const FooterComponent = () => (
+  <FooterContainer>
+    <Left>
+      <LogoContainer>
+        <h1>Jewelry Biz </h1>
+      </LogoContainer>
+      <SocialContainer>
+        <SocialIcon color="3B5999">
+          <Facebook onClick={() => window.open('https://www.facebook.com/ItsAidanPaul', '_blank')} />
+        </SocialIcon>
+        <SocialIcon color="E4405F" >
+          <Instagram onClick={() => window.open('https://www.instagram.com/aidanpaulmusic/', '_blank')} />
+        </SocialIcon>
+        <SocialIcon color="55ACEE" >
+          <YouTube onClick={() => window.open('https://www.youtube.com/channel/UCNhe2SJj5CVBkdtKWSj8HEw?view_as=subscriber', '_blank')} />
+        </SocialIcon>
+        <SocialIcon color="000000">
+          <LinkTwoTone onClick={() => window.open('https://linktr.ee/APMedia', '_blank')} />
+        </SocialIcon>
+      </SocialContainer>
+    </Left>
+    <Center>
+      <Title>Links</Title>
+      <List>
+        <Button
+          style={{ marginBottom: "5px" }}
+          aria-label="Headshot"
+          target="_blank"
+          href="https://www.aidanpaulmusic.com/_files/ugd/e80a20_8e1c035cb7df43339fe0a1eda94ee802.pdf"
+          cursor="pointer"
+          color="dark"
+        >Headshot</Button>
+        <Button
+          aria-label="Resume"
+          target="_blank"
+          href="https://www.aidanpaulmusic.com/_files/ugd/e80a20_7b2098ce624545b0a4038a43404f40e1.pdf"
+          cursor="pointer"
+          color="dark"
+        >Resume</Button>
+      </List>
+    </Center>
+    <Right>
+      <Title>Contact</Title>
+      <ContactItem>
+        <Room style={{ marginRight: '10px' }} />United States
+      </ContactItem>
+      <ContactItem>
+        <MailOutline style={{ marginRight: '10px' }} />_________@gmail.com
+      </ContactItem>
+    </Right>
+  </FooterContainer>
 );
 
 export default FooterComponent;

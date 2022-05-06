@@ -50,6 +50,7 @@ const NavBarRight = styled.div`
     align-items: center;
     margin-top: 10px;
     color: white;
+    margin-right: 10px;
 
     @media (max-width: 860px){
         font-size: 15px;
@@ -93,20 +94,23 @@ const PrimarySearchAppBar = ({ totalItems }) => {
           <NavBarCenter>
             <SocialContainer>
               <SocialIcon color="3B5999">
-                <Facebook onClick={() => window.open('https://www.facebook.com/ItsAidanPaul', '_blank')} />
+                <Facebook onClick={() => window.open('https://www.facebook.com/', '_blank')} />
               </SocialIcon>
               <SocialIcon color="E4405F" >
-                <Instagram onClick={() => window.open('https://www.instagram.com/aidanpaulmusic/', '_blank')} />
+                <Instagram onClick={() => window.open('https://www.instagram.com//', '_blank')} />
               </SocialIcon>
               <SocialIcon color="55ACEE" >
-                <YouTube onClick={() => window.open('https://www.youtube.com/channel/UCNhe2SJj5CVBkdtKWSj8HEw?view_as=subscriber', '_blank')} />
+                <YouTube onClick={() => window.open('', '_blank')} />
               </SocialIcon>
               <SocialIcon color="000000">
-                <LinkTwoTone onClick={() => window.open('https://linktr.ee/APMedia', '_blank')} />
+                <LinkTwoTone onClick={() => window.open('', '_blank')} />
               </SocialIcon>
             </SocialContainer>
           </NavBarCenter>
           <NavBarRight>
+            <Typography component={Link} to="/prints" variant="h6" className={classes.title} color="inherit">
+              <h2>Prints</h2>
+            </Typography>
             <Typography component={Link} to="/updates" variant="h6" className={classes.title} color="inherit">
               <h2>Updates</h2>
             </Typography>

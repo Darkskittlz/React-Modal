@@ -6,7 +6,9 @@ import FooterComponent from '../Footer/Footer';
 import { Button } from 'reactstrap';
 import emailjs from '@emailjs/browser';
 import './bookings.css';
-// import pdf from '../../assets/aidanResume.pdf';
+import Welcome from '../../assets/welcome.png';
+import Earrings from '../../assets/earrings.jpg';
+import Bracelet from '../../assets/bracelet.jpg';
 import Jewelry from '../../assets/sample2.jpg';
 import Jewelry2 from '../../assets/sample3.jpg';
 
@@ -14,17 +16,15 @@ const Row = styled.div`
   display: flex;
   flex-direction: row;
   z-index: 999;
-  border: 2px solid black;
-  width: 97%;
-  margin-left: -10px;
+  width: 100%;
 
   @media (max-width: 860px){
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
       justify-content: center;
-      margin-left: -10px;
       width: 96%;
+      margin-bottom: 10px;
     }
 `
 
@@ -48,6 +48,27 @@ const Col = styled.div`
     }
   }
 
+`
+
+const HeaderContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+
+  img {
+    width: 60%;
+    border-radius: 10px;
+    @media (max-width: 860px){
+      width: 92%;
+    }
+  }
+
+  @media (max-width: 860px){
+      padding: 0px;
+      margin-left: -4%;
+    }
 `
 
 const Col2 = styled.div`
@@ -80,13 +101,13 @@ const Col2 = styled.div`
   }
 
   @media (max-width: 900px){
-    height: 500px;
+    height: 100%;
     width: 100%;
     margin-left: 0px;
-
+    padding-top: 20px;
+    padding-bottom: 20px;
 
     h1 {
-      margin-top: 100px;
       margin-bottom: 25px;
       font-size: 50px;
     }
@@ -96,8 +117,6 @@ const Col2 = styled.div`
     }
   }
 `
-
-
 
 
 const ButtonContainer = styled.div`
@@ -142,11 +161,16 @@ const ContactForm = styled.div`
 
     @media (max-width: 900px){
       width: 90%;
-
       h2 {
         font-size: 70px;
       }
     }
+
+    /* @media (min-width: 1500px){
+      width: 60%;
+      justify-content: center;
+      display: flex;
+    } */
 
 `
 
@@ -194,16 +218,19 @@ const Bookings = () => {
       <div className={classes.toolbar} />
       <ParticleBackground />
       <div class="wrapper">
+        <HeaderContainer>
+          <img src={Welcome} alt="img" />
+        </HeaderContainer>
         <Row>
           <Col2>
             <h1>For Custom Pieces: </h1>
             <h2>________@gmail.com</h2>
             <h2>***.***.****</h2>
-            {/* <ButtonContainer>
+            <ButtonContainer>
               <Button
                 aria-label="Headshot"
                 target="_blank"
-                href={headshot}
+                href={Earrings}
                 cursor="pointer"
                 color="dark"
                 margin-right="20px"
@@ -212,11 +239,11 @@ const Bookings = () => {
               <Button
                 aria-label="Resume"
                 target="_blank"
-                href={pdf}
+                href={Bracelet}
                 cursor="pointer"
                 color="dark"
               >Bracelets</Button>
-            </ButtonContainer> */}
+            </ButtonContainer>
           </Col2>
           <Col>
             <img src={Jewelry} alt="img" />

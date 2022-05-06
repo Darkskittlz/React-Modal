@@ -1,16 +1,18 @@
 import React, { useEffect } from 'react';
 import useStyles from './styles';
 import ParticleBackground from '../../ParticleBackground';
-import FooterComponent from '../Footer/Footer';
 import styled from 'styled-components';
 import { Button } from 'reactstrap';
-import './updates.css'
+import './updates.css';
+import FooterComponent from '../Footer/Footer';
+import StickyFooter from 'react-sticky-footer';
+
 
 const GridContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 500px;
+  height: 70vh;
 
   @media (max-width: 860px){
       display: flex;
@@ -55,6 +57,7 @@ const ButtonContainer = styled.div`
   justify-content: center;
 `
 
+
 const Updates = () => {
   const classes = useStyles();
   return (
@@ -66,7 +69,7 @@ const Updates = () => {
           <NewsContainer>
             <h2>News & Highlights</h2>
             <h3>
-              Anastasia & Collin News & highlights
+              Anastasia & Collin News & Highlights
             </h3>
             <br />
             <ButtonContainer>
@@ -80,9 +83,23 @@ const Updates = () => {
             </ButtonContainer>
           </NewsContainer>
         </GridContainer>
+        <div className="footer push">
+          <StickyFooter
+            bottomThreshold={50}
+            normalStyles={{
+              backgroundColor: "#999999",
+              padding: "2rem",
+              zIndex: "999"
+            }}
+            stickyStyles={{
+              backgroundColor: "rgba(255,255,255,.8)",
+              padding: "2rem"
+            }}
+          >
+            <FooterComponent />
+          </StickyFooter>
+        </div>
       </div>
-      <div class="push"></div>
-      <div class="footer"><FooterComponent /></div>
     </main>
   );
 };

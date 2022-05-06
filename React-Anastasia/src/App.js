@@ -6,6 +6,7 @@ import Checkout from './components/CheckoutForm/Checkout/Checkout';
 import { commerce } from './lib/commerce';
 import Bookings from './components/Bookings/Bookings';
 import Home from './components/Home/Home';
+import Prints from './components/Prints/Prints';
 
 const App = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -81,6 +82,9 @@ const App = () => {
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route exact path="/prints">
+            <Prints />
           </Route>
           <Route exact path="/updates">
             <Updates />

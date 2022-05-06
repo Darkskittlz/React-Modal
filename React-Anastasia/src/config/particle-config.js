@@ -2,11 +2,12 @@ const particlesConfig = {
   
     "background": {
       "color": {
-        "value": "#000000"
+        "value": "#FFC0CB"
       },
+      "image": "url('https://media4.giphy.com/media/3gWIjOpHyh066G46he/giphy.gif?cid=790b7611c93ab172c230d5516847ea876a5735eefbb3a04e&rid=giphy.gif&ct=s')",
       "position": "50% 50%",
       "repeat": "no-repeat",
-      "size": "cover"
+      "size": "50%"
     },
     "fullScreen": {
       "zIndex": 0

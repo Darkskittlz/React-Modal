@@ -20,7 +20,7 @@ const Grid2Container = styled.div`
 const Row = styled.div`
   display: flex;
   justify-content: center;
-  background-color: white;
+  background-color: #ffffff7f;
   border-radius: 20px;
   z-index: 999;
   height: 400px;
@@ -81,10 +81,7 @@ const Col = styled.div`
 const Col2 = styled.div`
   display: flex;
   border-radius: 10px;
-  opacity: 0.9;
   backdrop-filter: blur(10px);
-  background-color: #ffffff;
-  opacity: 1;
   width: 68%;
   margin-left: 10px;
   flex-direction: column;
@@ -139,6 +136,7 @@ const Banner = styled.div`
   h1 {
     color: white;
     font-size: 100px;
+    text-align: center;
     font-family: 'Dancing Script', cursive;
   }
 `
@@ -163,13 +161,12 @@ const Home = ({ products, onAddToCart }) => {
           <Row>
             <Col>
               {/* <img src={Natasha} alt="headshot" /> */}
-              <h1>Natasha IMG </h1>
+              <h1>Anastasia IMG </h1>
             </Col>
             <Col2>
               <Col2Text>
                 <h1> Bio </h1>
                 <h3>
-       
                 </h3>
               </Col2Text>
               <br />
@@ -180,8 +177,8 @@ const Home = ({ products, onAddToCart }) => {
               </Col2Text>
             </Col2>
           </Row>
-          </Grid2Container>
-          <Grid2Container>
+        </Grid2Container>
+        <Grid2Container>
           <Row>
             <Col2>
               <Col2Text>
